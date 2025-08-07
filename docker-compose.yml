@@ -1,8 +1,11 @@
 services:
-  nginx:
-    container_name: home-lite-client
-    image: nginx:alpine
-    ports:
-      - "80:80"
-    volumes:
-      - ./index.html:/usr/share/nginx/html/index.html
+    nginx:
+        container_name: home-lite-client
+        image: nginx:alpine
+        ports:
+            - '80:80'
+            - '443:443'
+        volumes:
+            - ./client/index.html:/usr/share/nginx/html/index.html
+            - ./client/myNginxConf/nginx.conf:/etc/nginx/conf.d/default.conf
+            - ./client/myNginxConf/cert:/etc/nginx/cert
