@@ -2,8 +2,9 @@ services:
     nginx:
         container_name: home-lite-client
         image: nginx:alpine
+        # 统一在docker-compose.yml中设置端口映射
         ports:
-            - '443:443'
+            - '443:80'
         volumes:
             - ./client/index.html:/usr/share/nginx/html/index.html
             - ./client/myNginxConf/nginx.conf:/etc/nginx/conf.d/default.conf
