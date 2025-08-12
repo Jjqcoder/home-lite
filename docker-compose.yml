@@ -3,7 +3,6 @@ services:
         container_name: home-lite-client
         image: nginx:alpine
         ports:
-            - '80:80'
             - '443:443'
         volumes:
             - ./client/index.html:/usr/share/nginx/html/index.html
