@@ -2,6 +2,7 @@
 
 # 本脚本用于在 CentOS 上申请 Let's Encrypt 证书
 # 注意：请先确保 80 端口已开放，且防火墙已放行 80/443 端口
+# 查看指定域名的证书信息：https://myssl.com/
 
 # 配置变量
 DOMAIN="www.wbeishangw.top"
